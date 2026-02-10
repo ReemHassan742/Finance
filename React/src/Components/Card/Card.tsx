@@ -1,15 +1,19 @@
 import React from 'react'
 import './Card.css'
-type Props = {}
+interface Props{
+  companyName: string;
+  ticker: string;
+  price: number;
+}
 
-const Card = (props: Props) => {
+const Card = ({companyName, ticker, price}: Props) => {
   return (
     <div className='card'>
-      <h2>Card Title</h2>
+      <h2>{companyName}</h2>
 
-      <div className='ditails'>
-        <h2>AAPL</h2>
-        <p>$110</p>
+      <div className='details'>
+        <h2>{ticker}</h2>
+        <p>{price}</p>
       </div>
         <p className='info'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
        
